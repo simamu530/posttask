@@ -40,12 +40,14 @@ export default {
   data() {
     return {
       items:["tasktitle"],
-      title: ''
-
+      title: '',
+      name: '',
+      month: '',
+      contents: '',
     }
     methods:{
       addTask :function() {
-        this.items.push(this.title);
+        this.items.push(this.title, this.name, this.month, this.contents);
         }
       }
     },
