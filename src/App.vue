@@ -6,7 +6,7 @@
         <ul>
           <li v-for="(item, itemIndex) in items" v-bind:key="itemIndex">
       件名：<input type="text" v-model="title" />
-          <p>{{ title }}</p>
+          <!-- <p>{{ title }}</p> -->
           </li>
           <li>
       依頼主：<input type="text" v-model="name" />
@@ -44,14 +44,14 @@ export default {
       name: '',
       month: '',
       contents: '',
-    }
-    methods:{
-      addTask :function() {
-        this.items.push(this.title, this.name, this.month, this.contents);
-        }
+    };
+  },
+  methods:{
+    addTask :function() {
+      this.items.push(this.title, this.name, this.month, this.contents);
       }
-    },
-  };
+    }
+};
 
 </script>
 
