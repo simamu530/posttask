@@ -122,7 +122,7 @@ export default {
     transition: 0.2s;
     position: fixed;
     top: 0;
-    left:calc(-100% - 80px);
+    left:calc(100% - 80px);
     background: #fff;
     color: #333333;
     box-shadow: 80px 0 rgba(38, 98, 213, 0.3);

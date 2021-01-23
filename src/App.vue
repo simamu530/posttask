@@ -4,7 +4,7 @@
     <main>
       <div id="task">
         <ul>
-          <li v-for="(item, itemIndex) in items" v-bind:key="itemIndex">
+          <li>
       件名：<input type="text" v-model="title" />
           <!-- <p>{{ title }}</p> -->
           </li>
@@ -16,10 +16,12 @@
           </li>
           <li>
       内容：<input type="text" v-model="contents">
-      <p>{{ contents }}</p>
           </li>
       <button @click="addTask()">掲載する</button>
         </ul>
+      </div>
+      <div id="result">
+        <p v-for="(item, Index) in items" v-bind:key="Index">{{ item }}</p>
       </div>
     </main>
     <common-footer></common-footer>
@@ -39,16 +41,20 @@ export default {
   },
   data() {
     return {
-      items:["tasktitle"],
+      items:[],
       title: '',
       name: '',
+      day: '',
       month: '',
       contents: '',
     };
   },
   methods:{
     addTask :function() {
+      this.items.length=0
       this.items.push(this.title, this.name, this.month, this.contents);
+      this.title=""
+      console.log(this.items)
       }
     }
 };
